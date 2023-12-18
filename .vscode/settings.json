@@ -1,0 +1,12 @@
+{
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.tabWidth": 4,
+	"editor.indentSize": "tabSize",
+	"editor.tabSize": 4,
+	"editor.detectIndentation": false,
+	"files.insertFinalNewline": true,
+	"[svelte]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+}
