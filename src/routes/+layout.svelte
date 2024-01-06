@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
 	import '../app.css';
+	import Navbar from '$lib/layout/Navbar.svelte';
+	import Footer from '$lib/layout/Footer.svelte';
 	let path = '/';
 	onMount(() => {
 		path = window.location.pathname;
@@ -10,9 +12,9 @@
 </script>
 
 {#if !isStudio}
-	here add navbar
+	<Navbar />
 {/if}
 <slot />
 {#if !isStudio}
-	here add footer
+	<Footer />
 {/if}
