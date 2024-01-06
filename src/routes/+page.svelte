@@ -1,8 +1,5 @@
-<script>
-	/**
-	 * @type {string | any[]}
-	 */
-	export let data;
+<script lang="ts">
+	export let data: any;
 </script>
 
 <h1>Welcome to SvelteKit</h1>
