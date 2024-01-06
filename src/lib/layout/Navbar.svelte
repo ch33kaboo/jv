@@ -17,7 +17,7 @@
 <div
 	class="navbar bg-primary {atBottomOfScreen
 		? 'bg-opacity-100'
-		: 'bg-opacity-30'} text-base-content sticky top-0 z-30 flex h-16 w-full justify-center backdrop-blur shadow-sm transition-all"
+		: 'bg-opacity-30'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-center backdrop-blur shadow-sm transition-all"
 >
 	<div class="navbar-start">
 		<div class="dropdown">
@@ -51,24 +51,25 @@
 				<li><a>Item 3</a></li>
 			</ul>
 		</div>
-		<a class="btn btn-ghost text-xl">daisyUI</a>
+		<div class="flex flex-row items-center font-semibold text-gray-700 gap-2 text-xl">
+			<img src="logomeilleurqualité.png" class="h-14 m-3" alt="" />
+			<h2 class="text-xl tracking-tight">Association Jeunesse Volontaire</h2>
+		</div>
 	</div>
-	<div class="navbar-center hidden lg:flex">
+	<div class="navbar-end hidden lg:flex">
 		<ul class="menu menu-horizontal px-1">
-			<li><a>Item 1</a></li>
+			<li><a>Accueil</a></li>
 			<li>
 				<details>
-					<summary>Parent</summary>
+					<summary>Projets</summary>
 					<ul class="p-2">
 						<li><a>Submenu 1</a></li>
 						<li><a>Submenu 2</a></li>
 					</ul>
 				</details>
 			</li>
-			<li><a>Item 3</a></li>
+			<li><a>Rejoindre</a></li>
+			<li><a>À propos</a></li>
 		</ul>
-	</div>
-	<div class="navbar-end">
-		<a class="btn">Button</a>
 	</div>
 </div>
