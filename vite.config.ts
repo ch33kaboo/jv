@@ -5,7 +5,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	server: {
 		fs: {
-			allow: ['/home/chakib/.code/jv/sanity/schemas']
+			allow: ['./sanity/schemas']
 		}
 	}
 });
