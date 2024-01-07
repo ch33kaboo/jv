@@ -17,9 +17,9 @@
 <div
 	class="navbar bg-primary {atBottomOfScreen
 		? 'bg-opacity-80'
-		: 'bg-opacity-[0.03]'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-center backdrop-blur shadow-sm transition-all"
+		: 'bg-opacity-[0.03]'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-start backdrop-blur shadow-sm transition-all"
 >
-	<div class="navbar-start">
+	<div class="navbar-start w-full">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
 				<svg
@@ -36,40 +36,29 @@
 					/></svg
 				>
 			</div>
+			<!-- the burger menu for small screen -->
+			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<ul
 				tabindex="0"
-				class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+				class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 			>
-				<li><a>Item 1</a></li>
-				<li>
-					<a>Parent</a>
-					<ul class="p-2">
-						<li><a>Submenu 1</a></li>
-						<li><a>Submenu 2</a></li>
-					</ul>
-				</li>
-				<li><a>Item 3</a></li>
+				<li><a>wahda</a></li>
+				<li><a>zouj</a></li>
+				<li><a>tlata</a></li>
 			</ul>
 		</div>
-		<div class="flex flex-row items-center font-semibold text-gray-700 gap-2 text-xl">
+		<div class="flex w-full flex-row items-center font-semibold text-gray-700 gap-2 text-xl">
 			<img src="logomeilleurqualité.png" class="h-14 m-3" alt="" />
-			<h2 class="text-xl tracking-tight">Association Jeunesse Volontaire</h2>
+			<h2 class="text-xl w-full tracking-tight">Association Jeunesse&nbsp;Volontaire</h2>
 		</div>
 	</div>
+	<!-- the navbar element (when there is no burger menu) -->
 	<div class="navbar-end hidden lg:flex">
-		<ul class="menu menu-horizontal px-1">
-			<li><a>Accueil</a></li>
-			<li>
-				<details>
-					<summary>Projets</summary>
-					<ul class="p-2">
-						<li><a>Submenu 1</a></li>
-						<li><a>Submenu 2</a></li>
-					</ul>
-				</details>
-			</li>
-			<li><a>Rejoindre</a></li>
-			<li><a>À propos</a></li>
+		<ul class="flex flex-row w-full justify-around">
+			<li>hi</li>
+			<li>another</li>
+			<li>another</li>
+			<li>another</li>
 		</ul>
 	</div>
 </div>
