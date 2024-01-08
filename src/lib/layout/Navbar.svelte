@@ -41,7 +41,11 @@
 			<BurgerMenu />
 		</div>
 		<div class="flex w-full flex-row items-center font-semibold text-gray-700 gap-2 text-xl">
-			<img src="logomeilleurqualité.png" class="h-14 m-3" alt="" />
+			<img
+				src="logomeilleurqualité.png"
+				class="h-14 m-3"
+				alt="logo Association Jeunesse Volontaire"
+			/>
 			<h2 class="text-xl w-full tracking-tight">Association Jeunesse&nbsp;Volontaire</h2>
 		</div>
 	</div>

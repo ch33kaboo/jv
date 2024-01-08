@@ -15,7 +15,7 @@
 <div class="navbar-end hidden lg:flex">
 	<ul class="flex flex-row w-full justify-around">
 		<li
-			class="group relative cursor-pointer px-2 hover:opacity-100 {location == '/'
+			class="group capitalize relative cursor-pointer px-2 hover:opacity-100 {location == '/'
 				? 'opacity-100'
 				: 'opacity-60'} transition-all"
 		>
