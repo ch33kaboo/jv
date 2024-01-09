@@ -3,8 +3,9 @@
 >
 	<aside class="flex flex-col md:flex-row gap-5 items-center justify-center">
 		<img src="logomeilleurqualité.png" class="h-24 m-3" alt="" />
-		<p class="text-lg text-center md:text-left">
-			<b>Association Jeunesse&nbsp;Volontaire.</b><br />Providing reliable tech since 1992
+		<p class="text-lg text-center md:text-left max-w-md italic">
+			<b class="not-italic">Association Jeunesse&nbsp;Volontaire.</b><br />Groupe de Jeunes
+			bénévoles, engagé dans l'action sociale et la protection de l’environnement.
 		</p>
 	</aside>
 	<nav class="flex flex-col justify-center items-center md:items-start w-full">
