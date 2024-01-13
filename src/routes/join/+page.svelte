@@ -2,6 +2,11 @@
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
 
+	export let data: PageData;
+
+	// Client API:
+	const { form } = superForm(data.form);
+
 	function formatPhoneNumber(phoneNumber: string = '') {
 		// Remove all non-numeric characters from the input
 		let cleanPhoneNumber = phoneNumber.replace(/[^0-9]+/g, '');
@@ -12,10 +17,6 @@
 		return phoneNumber;
 	}
 
-	export let data: PageData;
-
-	// Client API:
-	const { form } = superForm(data.form);
 	$: $form.phoneNumber = formatPhoneNumber($form.phoneNumber);
 </script>
 
@@ -28,6 +29,7 @@
 		</p>
 	</div>
 	<form
+		method="POST"
 		class="w-full max-w-2xl bg-white shadow-lg rounded px-8 pt-6 pb-8 border-primary border-[1px] border-opacity-50"
 	>
 		<div class="flex flex-wrap -mx-3 mb-6">
@@ -39,6 +41,7 @@
 					nom
 				</label>
 				<input
+					name="lastName"
 					bind:value={$form.lastName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 					id="grid-last-name"
@@ -55,6 +58,7 @@
 					prénom
 				</label>
 				<input
+					name="firstName"
 					bind:value={$form.firstName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-first-name"
@@ -72,6 +76,7 @@
 					E-mail
 				</label>
 				<input
+					name="email"
 					bind:value={$form.email}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-email"
@@ -90,6 +95,7 @@
 					Age
 				</label>
 				<input
+					name="age"
 					bind:value={$form.age}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-age"
@@ -104,6 +110,7 @@
 					Téléphone
 				</label>
 				<input
+					name="phoneNumber"
 					bind:value={$form.phoneNumber}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-phone"
@@ -121,6 +128,7 @@
 					Fonction
 				</label>
 				<input
+					name="function"
 					bind:value={$form.function}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-function"
