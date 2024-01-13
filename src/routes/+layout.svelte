@@ -14,7 +14,9 @@
 {#if !isStudio}
 	<Navbar />
 {/if}
-<slot />
+<div class="w-full h-full px-3 py-14 md:px-16 md:py-24">
+	<slot />
+</div>
 {#if !isStudio}
 	<Footer />
 {/if}
