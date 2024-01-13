@@ -16,8 +16,7 @@
 
 	// Client API:
 	const { form } = superForm(data.form);
-	let phoneNumber: string;
-	$: phoneNumber = formatPhoneNumber(phoneNumber);
+	$: $form.phoneNumber = formatPhoneNumber($form.phoneNumber);
 </script>
 
 <div class="w-full h-full flex flex-col justify-center items-center">
@@ -40,6 +39,7 @@
 					nom
 				</label>
 				<input
+					bind:value={$form.lastName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 					id="grid-last-name"
 					type="text"
@@ -55,6 +55,7 @@
 					prénom
 				</label>
 				<input
+					bind:value={$form.firstName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-first-name"
 					type="text"
@@ -71,6 +72,7 @@
 					E-mail
 				</label>
 				<input
+					bind:value={$form.email}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-email"
 					type="email"
@@ -88,6 +90,7 @@
 					Age
 				</label>
 				<input
+					bind:value={$form.age}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-age"
 					type="number"
@@ -101,14 +104,11 @@
 					Téléphone
 				</label>
 				<input
-					bind:value={phoneNumber}
+					bind:value={$form.phoneNumber}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-phone"
 					type="tel"
 					placeholder="0* ** ** ** **"
-					on:input={() => {
-						console.log(phoneNumber);
-					}}
 				/>
 			</div>
 		</div>
@@ -121,6 +121,7 @@
 					Fonction
 				</label>
 				<input
+					bind:value={$form.function}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-function"
 					type="text"
