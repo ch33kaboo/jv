@@ -20,8 +20,17 @@
 	$: phoneNumber = formatPhoneNumber(phoneNumber);
 </script>
 
-<div class="w-full h-full flex justify-center items-center">
-	<form class="w-full max-w-lg bg-white shadow-lg rounded px-8 pt-6 pb-8">
+<div class="w-full h-full flex flex-col justify-center items-center">
+	<div class="max-w-2xl flex flex-col gap-2 mb-6 w-full">
+		<h1 class="text-3xl font-extrabold">Rejoignez Notre Association!</h1>
+		<p class="text-neutral text-opacity-90">
+			Ensemble, agissons pour un avenir durable.<br />
+			Remplissez le formulaire ci-dessous pour devenir membre de notre Association.
+		</p>
+	</div>
+	<form
+		class="w-full max-w-2xl bg-white shadow-lg rounded px-8 pt-6 pb-8 border-primary border-[1px] border-opacity-50"
+	>
 		<div class="flex flex-wrap -mx-3 mb-6">
 			<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
 				<label
@@ -119,6 +128,9 @@
 				/>
 				<p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
 			</div>
+		</div>
+		<div class="flex items-center justify-end">
+			<button class="btn btn-primary" type="button"> Soumettre </button>
 		</div>
 	</form>
 </div>
