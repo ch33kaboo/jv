@@ -18,7 +18,7 @@
 
 <div
 	class="navbar bg-primary {atBottomOfScreen
-		? 'bg-opacity-80'
+		? 'bg-opacity-25'
 		: 'bg-opacity-[0.03]'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-start backdrop-blur shadow-sm transition-all"
 >
 	<div class="navbar-start w-full">
