@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
 
 const schema = z.object({
@@ -21,7 +22,7 @@ const schema = z.object({
 		.max(50, 'La fonction doit comporter au maximum 50 caractères'),
 	phoneNumber: z
 		.string()
-		.regex(/^[0-9]{10}$/, 'Le numéro de téléphone doit comporter exactement 10 chiffres')
+		.regex(/^0\d \d\d \d\d \d\d \d\d$/, 'Format du numéro de téléphone incorrect.')
 });
 
 export const load = async () => {
@@ -30,4 +31,19 @@ export const load = async () => {
 
 	// Unless you throw, always return { form } in load and form actions.
 	return { form };
+};
+
+export const actions = {
+	default: async ({ request }) => {
+		const form = await superValidate(request, schema);
+
+		if (!form.valid) {
+			return fail(400, { form });
+		}
+
+		// TODO: Do something with the validated form.data
+
+		// return { form };
+		console.log('yohooo');
+	}
 };

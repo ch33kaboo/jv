@@ -5,7 +5,7 @@
 	export let data: PageData;
 
 	// Client API:
-	const { form } = superForm(data.form);
+	const { form, errors, constraints, enhance } = superForm(data.form);
 
 	function formatPhoneNumber(phoneNumber: string = '') {
 		// Remove all non-numeric characters from the input
@@ -29,6 +29,7 @@
 		</p>
 	</div>
 	<form
+		use:enhance
 		method="POST"
 		class="w-full max-w-2xl bg-white shadow-lg rounded px-8 pt-6 pb-8 border-primary border-[1px] border-opacity-50"
 	>
@@ -41,6 +42,11 @@
 					nom
 				</label>
 				<input
+					aria-invalid={$errors.lastName ? 'true' : undefined}
+					on:click={() => {
+						console.log('errors:', $errors.lastName);
+						console.log('constraints:', $constraints.lastName);
+					}}
 					name="lastName"
 					bind:value={$form.lastName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -58,6 +64,11 @@
 					prénom
 				</label>
 				<input
+					aria-invalid={$errors.firstName ? 'true' : undefined}
+					on:click={() => {
+						console.log('errors:', $errors.firstName);
+						console.log('constraints:', $constraints.firstName);
+					}}
 					name="firstName"
 					bind:value={$form.firstName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -76,6 +87,11 @@
 					E-mail
 				</label>
 				<input
+					aria-invalid={$errors.email ? 'true' : undefined}
+					on:click={() => {
+						console.log('errors:', $errors.email);
+						console.log('constraints:', $constraints.email);
+					}}
 					name="email"
 					bind:value={$form.email}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -95,6 +111,11 @@
 					Age
 				</label>
 				<input
+					aria-invalid={$errors.age ? 'true' : undefined}
+					on:click={() => {
+						console.log('errors:', $errors.age);
+						console.log('constraints:', $constraints.age);
+					}}
 					name="age"
 					bind:value={$form.age}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -110,6 +131,11 @@
 					Téléphone
 				</label>
 				<input
+					aria-invalid={$errors.phoneNumber ? 'true' : undefined}
+					on:click={() => {
+						console.log('errors:', $errors.phoneNumber);
+						console.log('constraints:', $constraints.phoneNumber);
+					}}
 					name="phoneNumber"
 					bind:value={$form.phoneNumber}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -128,6 +154,11 @@
 					Fonction
 				</label>
 				<input
+					aria-invalid={$errors.function ? 'true' : undefined}
+					on:click={() => {
+						console.log('errors:', $errors.function);
+						console.log('constraints:', $constraints.function);
+					}}
 					name="function"
 					bind:value={$form.function}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -139,7 +170,7 @@
 			</div>
 		</div>
 		<div class="flex items-center justify-end">
-			<button class="btn btn-primary" type="button"> Soumettre </button>
+			<button class="btn btn-primary"> Soumettre </button>
 		</div>
 	</form>
 </div>
