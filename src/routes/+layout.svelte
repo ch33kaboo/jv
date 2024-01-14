@@ -8,7 +8,8 @@
 		path = window.location.pathname;
 	});
 
-	$: isStudio = path === '/studio';
+	$: isStudio =
+		path.startsWith('/studio') || path.startsWith('/structure') || path.startsWith('/vision');
 </script>
 
 {#if !isStudio}
