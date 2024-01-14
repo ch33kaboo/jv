@@ -49,12 +49,16 @@
 					}}
 					name="lastName"
 					bind:value={$form.lastName}
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+					class="appearance-none block w-full bg-gray-200 text-gray-700 border {$errors.lastName
+						? 'border-red-500 mb-3'
+						: 'border-gray-200'} rounded px-4 py-3 leading-tight focus:outline-none focus:bg-white"
 					id="grid-last-name"
 					type="text"
 					placeholder="Nom"
 				/>
-				<p class="text-red-500 text-xs italic">Please fill out this field.</p>
+				{#if $errors.lastName}
+					<p class="text-red-500 text-xs italic">{$errors.lastName}</p>
+				{/if}
 			</div>
 			<div class="w-full md:w-1/2 px-3">
 				<label
@@ -71,11 +75,16 @@
 					}}
 					name="firstName"
 					bind:value={$form.firstName}
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					class="appearance-none block w-full bg-gray-200 text-gray-700 border {$errors.firstName
+						? 'border-red-500 mb-3'
+						: 'border-gray-200'} rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-first-name"
 					type="text"
 					placeholder="Prénom"
 				/>
+				{#if $errors.firstName}
+					<p class="text-red-500 text-xs italic">{$errors.firstName}</p>
+				{/if}
 			</div>
 		</div>
 		<div class="flex flex-wrap -mx-3 mb-6">
@@ -94,12 +103,16 @@
 					}}
 					name="email"
 					bind:value={$form.email}
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 {$errors.email
+						? 'border-red-500 mb-3'
+						: 'border-gray-200'} leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-email"
 					type="email"
 					placeholder="exemple@gmail.com"
 				/>
-				<p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+				{#if $errors.email}
+					<p class="text-red-500 text-xs italic">{$errors.email}</p>
+				{/if}
 			</div>
 		</div>
 		<div class="flex flex-wrap -mx-3 mb-6">
@@ -118,10 +131,15 @@
 					}}
 					name="age"
 					bind:value={$form.age}
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 {$errors.age
+						? 'border-red-500 mb-3'
+						: 'border-gray-200'}"
 					id="grid-age"
 					type="number"
 				/>
+				{#if $errors.age}
+					<p class="text-red-500 text-xs italic">{$errors.age}</p>
+				{/if}
 			</div>
 			<div class="w-full md:w-2/3 px-3 mb-6 md:mb-0">
 				<label
@@ -138,11 +156,16 @@
 					}}
 					name="phoneNumber"
 					bind:value={$form.phoneNumber}
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 {$errors.phoneNumber
+						? 'border-red-500 mb-3'
+						: 'border-gray-200'}"
 					id="grid-phone"
 					type="tel"
 					placeholder="0* ** ** ** **"
 				/>
+				{#if $errors.phoneNumber}
+					<p class="text-red-500 text-xs italic">{$errors.phoneNumber}</p>
+				{/if}
 			</div>
 		</div>
 		<div class="flex flex-wrap -mx-3 mb-6">
@@ -161,12 +184,16 @@
 					}}
 					name="function"
 					bind:value={$form.function}
-					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 {$errors.function
+						? 'border-red-500 mb-3'
+						: 'border-gray-200'} leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					id="grid-function"
 					type="text"
 					placeholder="Fonction"
 				/>
-				<p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+				{#if $errors.function}
+					<p class="text-red-500 text-xs italic">{$errors.function}</p>
+				{/if}
 			</div>
 		</div>
 		<div class="flex items-center justify-end">
