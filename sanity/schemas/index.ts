@@ -1,3 +1,4 @@
-import project from './project';
+import project from './projectSchema';
+import join from './joinSchema';
 
-export const schemaTypes = [project];
+export const schemaTypes = [project, join];
