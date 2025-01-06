@@ -5,6 +5,12 @@
 	import BurgerMenu from '$lib/layout/BurgerMenu.svelte';
 
 	onMount(() => {
+		if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 20) {
+			atBottomOfScreen = true;
+		} else {
+			atBottomOfScreen = false;
+		}
+
 		// because I want when user get close to the bottom make navbar opacity 100%
 		window.addEventListener('scroll', () => {
 			if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 20) {
