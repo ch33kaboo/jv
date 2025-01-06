@@ -17,9 +17,9 @@
 </script>
 
 <div
-	class="navbar bg-primary {atBottomOfScreen
-		? 'bg-opacity-25'
-		: 'bg-opacity-[0.03]'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-start backdrop-blur shadow-sm transition-all"
+	class="navbar {atBottomOfScreen
+		? 'bg-opacity-25 bg-primary'
+		: 'bg-opacity-80 bg-gray-50'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-start shadow-sm transition-all backdrop-blur-sm border-b"
 >
 	<div class="navbar-start w-full">
 		<div class="dropdown">
