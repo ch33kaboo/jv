@@ -23,6 +23,7 @@
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<!-- svelte-ignore a11y-missing-attribute -->
 			<a
+				data-sveltekit-preload-data="hover"
 				on:click={() => {
 					goto('/');
 				}}>accueil</a
@@ -44,6 +45,7 @@
 				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<!-- svelte-ignore a11y-missing-attribute -->
 				<a
+					data-sveltekit-preload-data="hover"
 					on:click={() => {
 						goto(`${route.path}`);
 					}}>{route.name}</a
