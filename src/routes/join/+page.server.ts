@@ -16,10 +16,7 @@ const schema = z.object({
 		.number()
 		.min(18, 'Vous devez avoir au moins 18 ans')
 		.max(120, 'Vous devez avoir moins de 120 ans'),
-	function: z
-		.string()
-		.min(2, 'La fonction doit comporter au moins 2 caractères')
-		.max(50, 'La fonction doit comporter au maximum 50 caractères'),
+	function: z.string().max(50, 'La fonction doit comporter au maximum 50 caractères'),
 	phoneNumber: z
 		.string()
 		.regex(/^(05|06|07) \d\d \d\d \d\d \d\d$/, 'Format du numéro de téléphone incorrect.')

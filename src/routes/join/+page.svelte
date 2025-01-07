@@ -174,7 +174,9 @@
 					class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
 					for="grid-function"
 				>
-					Fonction
+					Fonction <span class="lowercase italic opacity-90 font-medium"
+						>(ce champ est facultatif)</span
+					>
 				</label>
 				<input
 					aria-invalid={$errors.function ? 'true' : undefined}
