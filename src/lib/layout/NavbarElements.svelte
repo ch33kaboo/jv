@@ -1,7 +1,6 @@
 <!-- this component is for the navbar element (when there is no burger menu) -->
 <script>
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
 
 	$: location = $page.url.pathname;
 
@@ -19,15 +18,7 @@
 				? 'opacity-100'
 				: 'opacity-60'} transition-all"
 		>
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-static-element-interactions -->
-			<!-- svelte-ignore a11y-missing-attribute -->
-			<a
-				data-sveltekit-preload-data="hover"
-				on:click={() => {
-					goto('/');
-				}}>accueil</a
-			>
+			<a data-sveltekit-preload-data="hover" href="/">accueil</a>
 			<span
 				class="absolute -bottom-1 left-0 h-1 {location == '/'
 					? 'w-full'
@@ -41,15 +32,7 @@
 					? 'opacity-100'
 					: 'opacity-60'} transition-all"
 			>
-				<!-- svelte-ignore a11y-click-events-have-key-events -->
-				<!-- svelte-ignore a11y-no-static-element-interactions -->
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<a
-					data-sveltekit-preload-data="hover"
-					on:click={() => {
-						goto(`${route.path}`);
-					}}>{route.name}</a
-				>
+				<a data-sveltekit-preload-data="hover" href={route.path}>{route.name}</a>
 				<span
 					class="absolute -bottom-1 left-0 h-1 {location == `/${route.path}`
 						? 'w-full'
