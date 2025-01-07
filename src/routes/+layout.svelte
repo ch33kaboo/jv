@@ -9,7 +9,10 @@
 	});
 
 	$: isStudio =
-		path.startsWith('/studio') || path.startsWith('/structure') || path.startsWith('/vision');
+		path.startsWith('/studio') ||
+		path.startsWith('/structure') ||
+		path.startsWith('/vision') ||
+		path.startsWith('/admin');
 </script>
 
 {#if !isStudio}
