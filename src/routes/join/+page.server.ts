@@ -14,7 +14,7 @@ const schema = z.object({
 	email: z.string().email('Adresse e-mail invalide'),
 	age: z
 		.number()
-		.min(7, 'Vous devez avoir au moins 07 ans')
+		.min(18, 'Vous devez avoir au moins 18 ans')
 		.max(120, 'Vous devez avoir moins de 120 ans'),
 	function: z
 		.string()
@@ -22,7 +22,7 @@ const schema = z.object({
 		.max(50, 'La fonction doit comporter au maximum 50 caractères'),
 	phoneNumber: z
 		.string()
-		.regex(/^0\d \d\d \d\d \d\d \d\d$/, 'Format du numéro de téléphone incorrect.')
+		.regex(/^(05|06|07) \d\d \d\d \d\d \d\d$/, 'Format du numéro de téléphone incorrect.')
 });
 
 export const load = async () => {
