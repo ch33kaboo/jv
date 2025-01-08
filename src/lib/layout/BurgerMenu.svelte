@@ -6,6 +6,7 @@
 
 	let routes = [
 		{ path: 'projects', name: 'projets' },
+		{ path: 'new', name: 'nouveauté' },
 		{ path: 'join', name: 'Nous Rejoindre' },
 		{ path: 'about', name: 'À propos' }
 	];

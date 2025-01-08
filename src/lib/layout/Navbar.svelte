@@ -27,7 +27,7 @@
 		? 'bg-opacity-25 bg-primary'
 		: 'bg-opacity-80 bg-gray-50'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-start shadow-sm transition-all backdrop-blur-sm border-b"
 >
-	<div class="navbar-start w-full">
+	<div class="navbar-start">
 		<div class="dropdown">
 			<div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
 				<svg
