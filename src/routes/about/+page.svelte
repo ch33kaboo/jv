@@ -67,7 +67,7 @@
 					Numéro de compte : 763000001420051
 				</p>
 				<p>
-					<strong>Le président :</strong> Ayadoun Sidahmed<br />
+					<strong>Le président :</strong> Sidahmed Ayadoun<br />
 					<strong>Tél :</strong> 0551006266
 				</p>
 			</section>
