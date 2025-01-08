@@ -72,5 +72,14 @@
 				</p>
 			</section>
 		</main>
+		<iframe
+			class="w-full rounded-xl border shadow-md"
+			title="Google Maps view of Jeunesse Volontaire office"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d815.1742652911921!2d-0.6350110064923736!3d35.1891023184744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7f011ad588f493%3A0xb5be56b67eef0a58!2sSi%C3%A8ge%20association%20Jeunesse%20volontaire!5e0!3m2!1sen!2sdz!4v1736339409167!5m2!1sen!2sdz"
+			height="450"
+			allowfullscreen={false}
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"
+		/>
 	</div>
 </div>
