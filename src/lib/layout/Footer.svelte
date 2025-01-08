@@ -1,5 +1,6 @@
 <footer
-	class="footer flex-col md:flex-row items-center justify-center md:justify-normal bg-primary bg-opacity-25 backdrop-blur shadow-sm text-primary-content p-10 gap-14 md:gap-0"
+	class="footer flex-col md:flex-row items-center justify-center md:justify-normal bg-gray-50 bg-opacity-90 backdrop-blur-sm shadow-sm text-primary-content p-10 gap-14 md:gap-0 border-t"
+	style="box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.05);"
 >
 	<aside class="flex flex-col md:flex-row gap-5 items-center justify-center">
 		<img src="logomeilleurqualité.png" class="h-24 m-3" alt="" />

@@ -1,31 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
-	let atBottomOfScreen = false;
 	import NavbarElements from '$lib/layout/NavbarElements.svelte';
 	import BurgerMenu from '$lib/layout/BurgerMenu.svelte';
-
-	onMount(() => {
-		if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 20) {
-			atBottomOfScreen = true;
-		} else {
-			atBottomOfScreen = false;
-		}
-
-		// because I want when user get close to the bottom make navbar opacity 100%
-		window.addEventListener('scroll', () => {
-			if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 20) {
-				atBottomOfScreen = true;
-			} else {
-				atBottomOfScreen = false;
-			}
-		});
-	});
 </script>
 
 <div
-	class="navbar {atBottomOfScreen
-		? 'bg-opacity-25 bg-primary backdrop-contrast-[3]'
-		: 'bg-opacity-80 bg-gray-50'} text-base-content sticky top-0 z-30 flex h-20 w-full justify-start shadow-sm transition-all backdrop-blur-sm border-b"
+	class="navbar bg-opacity-90 bg-gray-50 text-base-content sticky top-0 z-30 flex h-20 w-full justify-start shadow-sm transition-all backdrop-blur-sm border-b"
 >
 	<div class="navbar-start">
 		<div class="dropdown">
