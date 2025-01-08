@@ -11,7 +11,7 @@
 	<nav class="flex flex-col justify-center items-center md:items-start w-full">
 		<header class="footer-title text-primary-content opacity-100">Réseaux sociaux</header>
 		<div class="grid grid-flow-col gap-4">
-			<a
+			<a href="https://x.com" target="_blank"
 				><svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -23,7 +23,7 @@
 					/></svg
 				></a
 			>
-			<a href="https://www.instagram.com/jv_sba/" target="_blank">
+			<a href="https://www.instagram.com/jv_sba" target="_blank">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					x="0px"
@@ -38,7 +38,7 @@
 					/>
 				</svg>
 			</a>
-			<a
+			<a href="https://youtube.com" target="_blank"
 				><svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
