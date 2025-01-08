@@ -43,10 +43,6 @@
 				</label>
 				<input
 					aria-invalid={$errors.lastName ? 'true' : undefined}
-					on:click={() => {
-						console.log('errors:', $errors.lastName);
-						console.log('constraints:', $constraints.lastName);
-					}}
 					name="lastName"
 					bind:value={$form.lastName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border {$errors.lastName
@@ -69,10 +65,6 @@
 				</label>
 				<input
 					aria-invalid={$errors.firstName ? 'true' : undefined}
-					on:click={() => {
-						console.log('errors:', $errors.firstName);
-						console.log('constraints:', $constraints.firstName);
-					}}
 					name="firstName"
 					bind:value={$form.firstName}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border {$errors.firstName
@@ -97,10 +89,6 @@
 				</label>
 				<input
 					aria-invalid={$errors.email ? 'true' : undefined}
-					on:click={() => {
-						console.log('errors:', $errors.email);
-						console.log('constraints:', $constraints.email);
-					}}
 					name="email"
 					bind:value={$form.email}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 {$errors.email
@@ -125,10 +113,6 @@
 				</label>
 				<input
 					aria-invalid={$errors.age ? 'true' : undefined}
-					on:click={() => {
-						console.log('errors:', $errors.age);
-						console.log('constraints:', $constraints.age);
-					}}
 					name="age"
 					bind:value={$form.age}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 {$errors.age
@@ -150,10 +134,6 @@
 				</label>
 				<input
 					aria-invalid={$errors.phoneNumber ? 'true' : undefined}
-					on:click={() => {
-						console.log('errors:', $errors.phoneNumber);
-						console.log('constraints:', $constraints.phoneNumber);
-					}}
 					name="phoneNumber"
 					bind:value={$form.phoneNumber}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 {$errors.phoneNumber
@@ -180,10 +160,6 @@
 				</label>
 				<input
 					aria-invalid={$errors.function ? 'true' : undefined}
-					on:click={() => {
-						console.log('errors:', $errors.function);
-						console.log('constraints:', $constraints.function);
-					}}
 					name="function"
 					bind:value={$form.function}
 					class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 {$errors.function
