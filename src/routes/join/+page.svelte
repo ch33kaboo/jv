@@ -5,7 +5,7 @@
 	export let data: PageData;
 
 	// Client API:
-	const { form, errors, constraints, enhance } = superForm(data.form);
+	const { form, errors, enhance } = superForm(data.form);
 
 	function formatPhoneNumber(phoneNumber: string = '') {
 		// Remove all non-numeric characters from the input
