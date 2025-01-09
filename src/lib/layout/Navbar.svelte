@@ -27,7 +27,7 @@
 		</div>
 		<div class="flex w-full flex-row items-center font-semibold text-gray-700 gap-2 text-xl">
 			<img
-				src="logomeilleurqualité.png"
+				src="/logomeilleurqualité.png"
 				class="h-14 m-3"
 				alt="logo Association Jeunesse Volontaire"
 			/>

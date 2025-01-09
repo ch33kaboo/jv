@@ -3,7 +3,7 @@
 	style="box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.05);"
 >
 	<aside class="flex flex-col md:flex-row gap-5 items-center justify-center">
-		<img src="logomeilleurqualité.png" class="h-24 m-3" alt="" />
+		<img src="/logomeilleurqualité.png" class="h-24 m-3" alt="" />
 		<p class="text-lg text-center md:text-left max-w-md italic">
 			<b class="not-italic">Association Jeunesse&nbsp;Volontaire.</b><br />Groupe de Jeunes
 			bénévoles, engagé dans l'action sociale et la protection de l’environnement.
