@@ -56,7 +56,7 @@
 						<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 						<ul
 							tabindex="0"
-							class="dropdown-content menu p-2 shadow rounded-md w-52 bg-opacity-90 bg-gray-50 backdrop-blur-sm border top-10 -left-1 gap-2"
+							class="dropdown-content menu p-2 shadow rounded-md w-52 bg-opacity-90 bg-gray-50 backdrop-blur-sm border top-8 -left-1 gap-2"
 						>
 							{#each route.children as child}
 								<li>
