@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>À propos - Jeunesse Volontaire</title>
+	<title>À Propos - Jeunesse Volontaire</title>
 </svelte:head>
 
 <div class="flex justify-center">
