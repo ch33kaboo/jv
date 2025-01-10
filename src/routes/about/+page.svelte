@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>À propos - Jeunesse Volontaire</title>
+</svelte:head>
+
 <div class="flex justify-center">
 	<div class="w-full prose lg:prose-xl">
 		<header>

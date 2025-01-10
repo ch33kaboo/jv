@@ -5,3 +5,7 @@
 		goto('/structure');
 	});
 </script>
+
+<svelte:head>
+	<title>Admin - Jeunesse Volontaire</title>
+</svelte:head>

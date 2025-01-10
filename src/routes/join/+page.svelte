@@ -20,6 +20,10 @@
 	$: $form.phoneNumber = formatPhoneNumber($form.phoneNumber);
 </script>
 
+<svelte:head>
+	<title>Nous Rejoindre - Jeunesse Volontaire</title>
+</svelte:head>
+
 <div class="w-full h-full flex flex-col justify-center items-center">
 	<div class="max-w-2xl flex flex-col gap-2 mb-6 w-full">
 		<h1 class="text-3xl font-extrabold">Rejoignez Notre Association!</h1>

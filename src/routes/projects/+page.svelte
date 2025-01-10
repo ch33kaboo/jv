@@ -24,6 +24,10 @@
 	};
 </script>
 
+<svelte:head>
+	<title>Projets - Jeunesse Volontaire</title>
+</svelte:head>
+
 {#await load()}
 	<div class="w-full text-center">
 		<span class="loading loading-spinner loading-lg" />
