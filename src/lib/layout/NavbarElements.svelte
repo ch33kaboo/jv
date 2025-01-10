@@ -74,7 +74,7 @@
 						</ul>
 					</div>
 				{:else}
-					<a data-sveltekit-preload-data="hover" href={route.path}>{route.name}</a>
+					<a data-sveltekit-preload-data="hover" href={`/${route.path}`}>{route.name}</a>
 					<span
 						class="absolute -bottom-1 left-0 h-1 {location == `/${route.path}`
 							? 'w-full'
