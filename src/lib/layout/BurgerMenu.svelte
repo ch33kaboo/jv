@@ -4,16 +4,16 @@
 
 	$: location = $page.url.pathname;
 
-	let routes = [
+	const routes = [
 		{
 			path: 'projects',
-			name: 'projets',
+			name: 'Projets',
 			children: [
-				{ path: 'completed', name: 'projets réalisé' },
-				{ path: 'ongoing', name: 'projets en cours de réalisation' }
+				{ path: 'completed', name: 'Projets Réalisés' },
+				{ path: 'ongoing', name: 'Projets en Cours de Réalisation' }
 			]
 		},
-		{ path: 'new', name: 'nouveauté' },
+		{ path: 'new', name: 'Nouveauté' },
 		{ path: 'join', name: 'Nous Rejoindre' },
 		{ path: 'about', name: 'À propos' }
 	];
@@ -25,7 +25,7 @@
 	class="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
 >
 	<li class="font-medium capitalize">
-		<a class={location == '/' ? 'bg-primary' : ''} href="/">accueil</a>
+		<a class={location == '/' ? 'bg-primary' : ''} href="/">Accueil</a>
 	</li>
 	{#each routes as route}
 		{#if route.children}

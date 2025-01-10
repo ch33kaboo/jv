@@ -4,16 +4,16 @@
 
 	$: location = $page.url.pathname;
 
-	let routes = [
+	const routes = [
 		{
 			path: 'projects',
-			name: 'projets',
+			name: 'Projets',
 			children: [
-				{ path: 'completed', name: 'projets réalisé' },
-				{ path: 'ongoing', name: 'projets en cours de réalisation' }
+				{ path: 'completed', name: 'Projets Réalisés' },
+				{ path: 'ongoing', name: 'Projets en Cours de Réalisation' }
 			]
 		},
-		{ path: 'new', name: 'nouveauté' },
+		{ path: 'new', name: 'Nouveauté' },
 		{ path: 'join', name: 'Nous Rejoindre' },
 		{ path: 'about', name: 'À propos' }
 	];
@@ -26,7 +26,7 @@
 				? 'opacity-100'
 				: 'opacity-60'} transition-all"
 		>
-			<a data-sveltekit-preload-data="hover" href="/">accueil</a>
+			<a data-sveltekit-preload-data="hover" href="/">Accueil</a>
 			<span
 				class="absolute -bottom-1 left-0 h-1 {location == '/'
 					? 'w-full'
