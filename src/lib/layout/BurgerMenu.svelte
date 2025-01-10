@@ -5,7 +5,14 @@
 	$: location = $page.url.pathname;
 
 	let routes = [
-		{ path: 'projects', name: 'projets' },
+		{
+			path: 'projects',
+			name: 'projets',
+			children: [
+				{ path: 'completed', name: 'projets réalisé' },
+				{ path: 'ongoing', name: 'projets en cours de réalisation' }
+			]
+		},
 		{ path: 'new', name: 'nouveauté' },
 		{ path: 'join', name: 'Nous Rejoindre' },
 		{ path: 'about', name: 'À propos' }
@@ -21,8 +28,23 @@
 		<a class={location == '/' ? 'bg-primary' : ''} href="/">accueil</a>
 	</li>
 	{#each routes as route}
-		<li class="font-medium capitalize">
-			<a class={location == `/${route.path}` ? 'bg-primary' : ''} href={route.path}>{route.name}</a>
-		</li>
+		{#if route.children}
+			{#each route.children as child}
+				<li class="font-medium capitalize">
+					<a
+						class={location == `/${route.path}/${child.path}` ? 'bg-primary' : ''}
+						href={`/${route.path}/${child.path}`}
+					>
+						{child.name}
+					</a>
+				</li>
+			{/each}
+		{:else}
+			<li class="font-medium capitalize">
+				<a class={location == `/${route.path}` ? 'bg-primary' : ''} href={`/${route.path}`}>
+					{route.name}
+				</a>
+			</li>
+		{/if}
 	{/each}
 </ul>
