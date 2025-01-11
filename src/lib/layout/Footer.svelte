@@ -1,3 +1,7 @@
+<script>
+	const currentYear = new Date().getFullYear();
+</script>
+
 <footer
 	class="flex flex-col items-center justify-center bg-gray-50 bg-opacity-90 backdrop-blur-sm shadow-sm text-primary-content p-10 gap-14 border-t"
 	style="box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.05);"
@@ -91,8 +95,17 @@
 			</div>
 		</div>
 		<div class="w-full sm:w-1/2 md:pl-4">
-			<p>copyright</p>
-			<p>copyright</p>
+			<p>
+				&copy; {currentYear ? currentYear : 2025} Jeunesse Volontaire (jv). Tous droits réservés.
+			</p>
+			<p>
+				Développé par <a
+					href="https://chakib.tech"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="link">Chakib Ouzane (ch33kaboo)</a
+				>.
+			</p>
 		</div>
 	</div>
 </footer>
