@@ -24,12 +24,22 @@
 		</div>
 		<div class="w-full sm:w-1/2">
 			<header class="text-primary-content opacity-100 mb-2 font-bold uppercase">Navigation</header>
-			<ul>
-				<li><a href="/">Accueil</a></li>
-				<li><a href="/projets">Projets</a></li>
-				<li><a href="/nouveaute">Nouveauté</a></li>
-				<li><a href="/nous-rejoindre">Nous Rejoindre</a></li>
-				<li><a href="/a-propos">À Propos</a></li>
+			<ul class="select-none">
+				<li><a href="/" class="link-hover">Accueil</a></li>
+				<li>
+					<span>Projets</span>
+					<ul class="ml-5">
+						<li>
+							<a href="/projects/completed" class="link-hover">Projets Réalisés</a>
+						</li>
+						<li>
+							<a href="/projects/ongoing" class="link-hover">Projets en Cours de Réalisation</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="/new" class="link-hover">Nouveauté</a></li>
+				<li><a href="/join" class="link-hover">Nous Rejoindre</a></li>
+				<li><a href="/about" class="link-hover">À Propos</a></li>
 			</ul>
 		</div>
 	</div>
