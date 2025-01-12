@@ -28,14 +28,19 @@
 					<td>{member.email}</td>
 					<td>{member.age}</td>
 					<td>{member.phoneNumber}</td>
-					<td>{member.function}</td>
+					<td class={member.function ? '' : 'opacity-60'}>{member.function || 'Non renseigné'}</td>
 					<td>{new Date(member.created_at).toLocaleDateString('fr-FR')}</td>
 					<td
 						class={member.applicationStatus === 'pending'
 							? 'text-blue-800'
 							: member.applicationStatus === 'accepted'
 							? 'text-green-800'
-							: 'text-red-800'}>{member.applicationStatus}</td
+							: 'text-red-800'}
+						>{member.applicationStatus === 'pending'
+							? 'En attente'
+							: member.applicationStatus === 'accepted'
+							? 'Accepté'
+							: 'Rejeté'}</td
 					>
 				</tr>
 			{/each}
