@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { superForm } from 'sveltekit-superforms/client';
+	import toast, { Toaster } from 'svelte-french-toast';
 
 	export let data: PageData;
 
@@ -8,7 +9,9 @@
 	const { form, errors, enhance } = superForm(data.form, {
 		onResult: ({ result }) => {
 			if (result.status == 200) {
-				console.log('Form submitted successfully! make toast now');
+				toast.success('Formulaire soumis avec succès !', {
+					duration: 5000
+				});
 				// clear the form
 				form.set({
 					lastName: '',
@@ -38,6 +41,8 @@
 <svelte:head>
 	<title>Nous Rejoindre - Jeunesse Volontaire</title>
 </svelte:head>
+
+<Toaster />
 
 <div class="w-full h-full flex flex-col justify-center items-center">
 	<div class="max-w-2xl flex flex-col gap-2 mb-6 w-full">
