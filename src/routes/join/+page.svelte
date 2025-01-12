@@ -5,7 +5,22 @@
 	export let data: PageData;
 
 	// Client API:
-	const { form, errors, enhance } = superForm(data.form);
+	const { form, errors, enhance } = superForm(data.form, {
+		onResult: ({ result }) => {
+			if (result.status == 200) {
+				console.log('Form submitted successfully! make toast now');
+				// clear the form
+				form.set({
+					lastName: '',
+					firstName: '',
+					email: '',
+					age: 0,
+					phoneNumber: '',
+					function: ''
+				});
+			}
+		}
+	});
 
 	function formatPhoneNumber(phoneNumber: string = '') {
 		// Remove all non-numeric characters from the input

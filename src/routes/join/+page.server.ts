@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
+import { supabase } from '$lib/supabaseClient';
 
 const schema = z.object({
 	firstName: z
@@ -38,9 +39,33 @@ export const actions = {
 			return fail(400, { form });
 		}
 
-		// TODO: Do something with the validated form.data
+		try {
+			const { error } = await supabase.from('users').insert({
+				firstName: form.data.firstName,
+				lastName: form.data.lastName,
+				email: form.data.email,
+				age: form.data.age,
+				phoneNumber: form.data.phoneNumber,
+				function: form.data.function
+			});
 
-		// return { form };
-		console.log('yohooo');
+			if (error) throw error;
+
+			form.data = {
+				firstName: '',
+				lastName: '',
+				email: '',
+				age: 0,
+				phoneNumber: '',
+				function: ''
+			};
+
+			return { form };
+		} catch (error) {
+			return fail(500, {
+				form,
+				error: error
+			});
+		}
 	}
 };
