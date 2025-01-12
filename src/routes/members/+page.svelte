@@ -1,5 +1,12 @@
 <script>
 	export let data;
+	let showFilterModal = false;
+	let selectedStatus = 'all';
+	let tempSelectedStatus = 'all';
+	$: filteredUsers =
+		selectedStatus === 'all'
+			? data.users
+			: data.users.filter((user) => user.applicationStatus === selectedStatus);
 </script>
 
 <svelte:head>
@@ -8,7 +15,15 @@
 
 <div class="text-start mb-8">
 	<h1 class="text-3xl font-bold text-gray-800 mb-2">Gestion des Membres</h1>
-	<p class="text-gray-600">Liste complète des candidatures et membres de Jeunesse Volontaire</p>
+	<p class="text-gray-600">
+		{selectedStatus === 'all'
+			? 'Liste complète des candidatures et membres de Jeunesse Volontaire'
+			: selectedStatus === 'pending'
+			? 'Liste des candidatures en attente'
+			: selectedStatus === 'accepted'
+			? 'Liste des candidatures acceptées'
+			: 'Liste des candidatures rejetées'}
+	</p>
 </div>
 <div class="overflow-x-auto">
 	<table class="table border bg-white shadow-md border-gray-200 rounded-lg">
@@ -25,7 +40,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each data.users as member}
+			{#each filteredUsers as member}
 				<tr>
 					<td>{member.lastName}</td>
 					<td>{member.firstName}</td>
@@ -53,7 +68,7 @@
 </div>
 
 <div class="flex flex-col sm:flex-row gap-4 mt-6 justify-end">
-	<button class="btn btn-primary" on:click={() => console.log('filter')}>
+	<button class="btn btn-primary" on:click={() => (showFilterModal = true)}>
 		Filtrer par statut
 	</button>
 	<a
@@ -64,3 +79,29 @@
 		Appliquer des modifications
 	</a>
 </div>
+
+{#if showFilterModal}
+	<div class="fixed inset-0 bg-black bg-opacity-5 flex items-center justify-center">
+		<div class="bg-white p-6 rounded-lg shadow-xl w-96">
+			<h3 class="text-lg font-semibold mb-4">Filtrer par statut</h3>
+			<select class="select select-bordered w-full mb-4" bind:value={tempSelectedStatus}>
+				<option value="all">Tous les statuts</option>
+				<option value="pending">En attente</option>
+				<option value="accepted">Accepté</option>
+				<option value="rejected">Rejeté</option>
+			</select>
+			<div class="flex justify-end gap-2">
+				<button class="btn btn-ghost" on:click={() => (showFilterModal = false)}> Fermer </button>
+				<button
+					class="btn btn-primary"
+					on:click={() => {
+						selectedStatus = tempSelectedStatus; // Apply the temporary status
+						showFilterModal = false;
+					}}
+				>
+					Appliquer
+				</button>
+			</div>
+		</div>
+	</div>
+{/if}
