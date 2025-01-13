@@ -3,13 +3,24 @@ import type { PageLoad } from './$types';
 
 export const load: PageLoad = async () => {
 	const ongoingProjects = await client.fetch(`
-        *[_type == "project"] {
+        *[_type == "project" && status == "ongoing"] {
             _id,
-            title,
+            name,
             description,
             status,
-            name
-            // Add other fields you want to fetch
+            "photo": photo {
+                "url": asset->url,
+                "alt": asset->originalFilename
+            },
+            "actions": actions[]-> {
+                _id,
+                name,
+                description,
+                "photo": photo {
+                    "url": asset->url,
+                    "alt": asset->originalFilename
+                }
+            }
         }
     `);
 
