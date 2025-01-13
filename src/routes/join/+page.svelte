@@ -40,6 +40,10 @@
 
 <svelte:head>
 	<title>Nous Rejoindre - Jeunesse Volontaire</title>
+	<meta
+		name="description"
+		content="Rejoignez Jeunesse Volontaire et contribuez à la protection de l'environnement et au développement d'une société solidaire et durable."
+	/>
 </svelte:head>
 
 <Toaster />

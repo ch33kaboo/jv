@@ -26,6 +26,10 @@
 
 <svelte:head>
 	<title>Projets - Jeunesse Volontaire</title>
+	<meta
+		name="description"
+		content="Explorez les projets menés par Jeunesse Volontaire pour préserver l'environnement, soutenir la biodiversité et promouvoir des actions sociales durables."
+	/>
 </svelte:head>
 
 {#await load()}

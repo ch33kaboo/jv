@@ -1,5 +1,9 @@
 <svelte:head>
 	<title>Admin - Jeunesse Volontaire</title>
+	<meta
+		name="description"
+		content="Accès à l'administration de Jeunesse Volontaire pour gérer le contenu et les fonctionnalités du site."
+	/>
 </svelte:head>
 
 <div class="flex flex-row justify-start items-center gap-2 mb-4">

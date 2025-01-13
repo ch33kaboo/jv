@@ -1,5 +1,9 @@
 <svelte:head>
 	<title>À Propos - Jeunesse Volontaire</title>
+	<meta
+		name="description"
+		content="Découvrez la mission et les valeurs de Jeunesse Volontaire, un groupe de jeunes bénévoles engagés dans l'action sociale et la protection de l'environnement depuis 2010."
+	/>
 </svelte:head>
 
 <div class="flex justify-center">

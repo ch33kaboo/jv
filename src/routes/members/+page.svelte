@@ -10,7 +10,8 @@
 </script>
 
 <svelte:head>
-	<title>Members - Jeunesse Volontaire</title>
+	<title>Membres - Jeunesse Volontaire</title>
+	<meta name="description" content="Consultez la liste des membres de Jeunesse Volontaire." />
 </svelte:head>
 
 <div class="text-start mb-8">
