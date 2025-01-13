@@ -51,7 +51,7 @@
 				Réseaux sociaux
 			</header>
 			<div class="grid grid-flow-col gap-4">
-				<a href="https://x.com" target="_blank"
+				<a href="https://x.com" target="_blank" aria-label="Visitez notre page Twitter"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -63,7 +63,11 @@
 						/></svg
 					></a
 				>
-				<a href="https://www.instagram.com/jv_sba" target="_blank">
+				<a
+					href="https://www.instagram.com/jv_sba"
+					target="_blank"
+					aria-label="Visitez notre page Instagram"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						x="0px"
@@ -78,7 +82,7 @@
 						/>
 					</svg>
 				</a>
-				<a href="https://youtube.com" target="_blank"
+				<a href="https://youtube.com" target="_blank" aria-label="Visitez notre chaîne YouTube"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
@@ -90,7 +94,10 @@
 						/></svg
 					></a
 				>
-				<a href="https://www.facebook.com/J.Volontaire" target="_blank"
+				<a
+					href="https://www.facebook.com/J.Volontaire"
+					target="_blank"
+					aria-label="Visitez notre page Facebook"
 					><svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"
