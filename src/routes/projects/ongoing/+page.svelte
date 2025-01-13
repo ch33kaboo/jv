@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PortableText } from '@portabletext/svelte';
 	export let data;
 </script>
 
@@ -16,11 +17,7 @@
 				<div class="card-body lg:w-2/3">
 					<h2 class="card-title">{project.name}</h2>
 					<div class="prose">
-						{#if typeof project.description === 'string'}
-							<p>{project.description}</p>
-						{:else}
-							{@html project.description}
-						{/if}
+						<PortableText value={project.description} />
 					</div>
 					{#if project.actions && project.actions.length > 0}
 						<div class="mt-4">
