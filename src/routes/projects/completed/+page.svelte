@@ -27,9 +27,14 @@
 							<div>
 								<h3 class="font-semibold mb-2">Related Actions:</h3>
 								<div class="flex flex-wrap gap-2">
-									{#each project.actions as action}
+									{#each project.actions.slice(0, 5) as action}
 										<span class="badge badge-primary">{action.name}</span>
 									{/each}
+									{#if project.actions.length > 5}
+										<span class="badge badge-secondary"
+											>Cliquez sur "voir les détails du projet" pour voir toutes les actions</span
+										>
+									{/if}
 								</div>
 							</div>
 						{/if}
