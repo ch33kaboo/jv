@@ -19,7 +19,7 @@
 
 	<div class="grid gap-6">
 		{#each data.projects as project}
-			<div class="card lg:card-side bg-base-100 shadow-xl animate-fade">
+			<div class="card lg:card-side bg-base-100 shadow-xl animate-fade border border-base-200">
 				{#if project.photo}
 					<figure class="lg:w-1/3">
 						<img src={project.photo.url} alt={project.name} class="h-full w-full object-cover" />
@@ -27,7 +27,7 @@
 				{/if}
 				<div class="card-body w-full lg:max-w-none lg:w-2/3">
 					<h2 class="card-title">{project.name}</h2>
-					<div class="prose max-w-none max-h-72 lg:max-h-64 overflow-hidden relative">
+					<div class="prose max-w-none max-h-72 lg:max-h-56 overflow-hidden relative">
 						<div
 							class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-base-100 to-transparent"
 						/>
@@ -39,10 +39,10 @@
 								<h3 class="font-semibold mb-2">Actions liées à ce projet:</h3>
 								<div class="flex flex-wrap gap-2">
 									{#each project.actions.slice(0, 5) as action}
-										<span class="badge badge-primary">{action.name}</span>
+										<span class="badge badge-primary p-3 font-medium h-auto">{action.name}</span>
 									{/each}
 									{#if project.actions.length > 5}
-										<span class="badge badge-secondary"
+										<span class="badge badge-secondary p-3 font-medium"
 											>Cliquez sur "voir les détails du projet" pour voir toutes les actions</span
 										>
 									{/if}
