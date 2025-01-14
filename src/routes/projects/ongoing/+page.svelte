@@ -14,7 +14,7 @@
 						<img src={project.photo.url} alt={project.name} class="h-full w-full object-cover" />
 					</figure>
 				{/if}
-				<div class="card-body w-full sm:max-w-max lg:max-w-none lg:w-2/3">
+				<div class="card-body w-full lg:max-w-none lg:w-2/3">
 					<h2 class="card-title">{project.name}</h2>
 					<div class="prose max-w-none max-h-72 lg:max-h-64 overflow-hidden relative">
 						<div
