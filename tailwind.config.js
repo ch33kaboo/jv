@@ -2,7 +2,21 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			animation: {
+				fade: 'fade .5s cubic-bezier(1,0,1,.51)'
+			},
+			keyframes: {
+				fade: {
+					from: {
+						opacity: 0
+					},
+					to: {
+						opacity: 1
+					}
+				}
+			}
+		}
 	},
 	plugins: [require('@tailwindcss/typography'), require('daisyui')],
 	daisyui: {
