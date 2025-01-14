@@ -32,7 +32,7 @@
 
 	<div class="mb-12">
 		<h2>Description du Projet</h2>
-		<PortableText value={data.project.description} />
+		<PortableText value={data.project.description} onMissingComponent={false} />
 	</div>
 
 	{#if data.project.actions && data.project.actions.length > 0}
@@ -49,7 +49,7 @@
 						<div class="card-body">
 							<h3 class="card-title text-xl">{action.name}</h3>
 							<div class="prose">
-								<PortableText value={action.description} />
+								<PortableText value={action.description} onMissingComponent={false} />
 							</div>
 						</div>
 					</div>
