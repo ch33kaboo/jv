@@ -16,7 +16,7 @@
 				{/if}
 				<div class="card-body lg:w-2/3">
 					<h2 class="card-title">{project.name}</h2>
-					<div class="prose">
+					<div class="prose max-w-none">
 						<PortableText value={project.description} />
 					</div>
 					{#if project.actions && project.actions.length > 0}
