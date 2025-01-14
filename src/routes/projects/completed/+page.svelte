@@ -3,7 +3,7 @@
 	export let data;
 </script>
 
-<div class="container mx-auto p-4">
+<div class="container mx-auto">
 	<h1 class="text-4xl font-bold text-center mb-8">Completed Projects</h1>
 
 	<div class="grid gap-6">
@@ -14,7 +14,7 @@
 						<img src={project.photo.url} alt={project.name} class="h-full w-full object-cover" />
 					</figure>
 				{/if}
-				<div class="card-body lg:w-2/3">
+				<div class="card-body w-[90vw] max-w-max lg:max-w-none lg:w-2/3">
 					<h2 class="card-title">{project.name}</h2>
 					<div class="prose max-w-none">
 						<PortableText value={project.description} />
