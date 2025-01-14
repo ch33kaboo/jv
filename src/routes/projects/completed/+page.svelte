@@ -20,7 +20,7 @@
 						<div
 							class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-base-100 to-transparent"
 						/>
-						<PortableText value={project.description} />
+						<PortableText value={project.description} onMissingComponent={false} />
 					</div>
 					<div class="mt-4 flex flex-col items-start md:flex-row md:justify-between gap-5">
 						{#if project.actions && project.actions.length > 0}
