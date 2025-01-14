@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte';
+	import { goto } from '$app/navigation';
 	export let data;
 </script>
 
@@ -51,8 +52,7 @@
 						{/if}
 						<button
 							class="btn btn-primary self-end"
-							on:click={() => console.log(`here show modal with id ${project._id}`)}
-							>voir les détails du projet</button
+							on:click={() => goto(`/projects/${project._id}`)}>voir les détails du projet</button
 						>
 					</div>
 				</div>
