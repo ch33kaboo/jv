@@ -24,7 +24,7 @@
 				<p><strong>Date de création :</strong> 07/07/2010</p>
 				<p>
 					<strong>Adresse :</strong>
-					<a href="#location-on-map">13, rue Médine Sidi Bel Abbés 22000 Algérie</a>
+					<a href="#location-on-map">13 Rue de Médine, 22000 Sidi Bel Abbès, Algérie</a>
 				</p>
 			</section>
 
