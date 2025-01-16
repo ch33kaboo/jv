@@ -1,6 +1,31 @@
 <script lang="ts">
 	import { PortableText } from '@portabletext/svelte';
+	import { onMount } from 'svelte';
 	export let data;
+
+	const replaceSpecialChars = () => {
+		const proseElements = document.querySelectorAll('.prose');
+		proseElements.forEach((prose) => {
+			prose.innerHTML = prose.innerHTML.replaceAll('&lt;', '<').replaceAll('&gt;', '>');
+		});
+	};
+
+	const modifyIframes = () => {
+		const iframes = document.querySelectorAll('iframe');
+		iframes.forEach((iframe) => {
+			// Remove width and height attributes
+			iframe.removeAttribute('width');
+			iframe.removeAttribute('height');
+			// Add classes
+			iframe.classList.add('w-full', 'aspect-video', 'shadow-md', 'rounded-lg');
+		});
+	};
+
+	// this is done to render youtube video's iframes (since admin will add videos as youtube videos iframes)
+	onMount(() => {
+		replaceSpecialChars();
+		modifyIframes();
+	});
 </script>
 
 <svelte:head>
