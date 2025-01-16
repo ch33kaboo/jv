@@ -63,7 +63,11 @@
 	{#if data.project.actions && data.project.actions.length > 0}
 		<div class="mb-12">
 			<h2>Actions liées à ce projet</h2>
-			<div class="not-prose grid gap-6 md:grid-cols-2">
+			<p>
+				Pour assurer la réussite de ce projet, l'association "Jeunesse Volontaire" a réalisé
+				différentes actions. Voici une liste de ces actions ainsi que leurs détails.
+			</p>
+			<div class="not-prose flex flex-col gap-6">
 				{#each data.project.actions as action}
 					<div class="card bg-base-100 shadow-md border">
 						{#if action.photo}
@@ -72,8 +76,8 @@
 							</figure>
 						{/if}
 						<div class="card-body">
-							<h3 class="card-title text-xl">{action.name}</h3>
-							<div class="prose">
+							<h3 class="card-title text-xl text-slate-800">{action.name}</h3>
+							<div class="prose max-w-none">
 								<PortableText value={action.description} onMissingComponent={false} />
 							</div>
 						</div>
