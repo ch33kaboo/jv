@@ -27,7 +27,7 @@
 			<ul class="select-none">
 				<li><a href="/" class="link-hover">Accueil</a></li>
 				<li>
-					<span>Projets</span>
+					<span><a href="/projects" class="link-hover">Projets</a></span>
 					<ul class="ml-5">
 						<li>
 							<a href="/projects/completed" class="link-hover">Projets Réalisés</a>

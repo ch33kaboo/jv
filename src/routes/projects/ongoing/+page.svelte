@@ -45,7 +45,9 @@
 
 	<div class="grid gap-6">
 		{#each data.projects as project}
-			<div class="card lg:card-side bg-base-100 shadow-xl animate-fade border border-base-200">
+			<div
+				class="card lg:card-side bg-base-100 shadow-xl animate-fade border border-neutral border-opacity-25"
+			>
 				{#if project.photo}
 					<figure class="lg:w-1/3">
 						<img src={project.photo.url} alt={project.name} class="h-full w-full object-cover" />
