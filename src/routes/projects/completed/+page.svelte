@@ -65,10 +65,12 @@
 								<h3 class="font-semibold mb-2">Actions liées à ce projet:</h3>
 								<div class="flex flex-wrap gap-2">
 									{#each project.actions.slice(0, 5) as action}
-										<span class="badge badge-primary p-3 font-medium h-auto">{action.name}</span>
+										<span class="badge badge-primary py-2 px-3 font-medium h-auto"
+											>{action.name}</span
+										>
 									{/each}
 									{#if project.actions.length > 5}
-										<span class="badge badge-secondary p-3 font-medium"
+										<span class="badge badge-secondary py-2 px-3 font-medium"
 											>Cliquez sur "voir les détails du projet" pour voir toutes les actions</span
 										>
 									{/if}
