@@ -14,7 +14,8 @@
 		'/photos/heroSectionPhotos/fleurs_place_carnot.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling2.jpeg',
-		'/photos/heroSectionPhotos/lac_sidi_mohamed_benali.jpeg'
+		'/photos/heroSectionPhotos/lac_sidi_mohamed_benali.jpeg',
+		'/photos/heroSectionPhotos/trash.jpeg'
 	];
 
 	let sliderContainer: HTMLDivElement;
