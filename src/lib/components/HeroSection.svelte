@@ -5,7 +5,6 @@
 	const photos = [
 		'/photos/heroSectionPhotos/femmes.jpeg',
 		'/photos/heroSectionPhotos/groupe_lac.jpeg',
-		'/photos/heroSectionPhotos/action_ain_thrid.jpg',
 		'/photos/heroSectionPhotos/children_smiling.jpeg',
 		'/photos/heroSectionPhotos/president_au_lac.jpeg',
 		'/photos/heroSectionPhotos/group_photo_litma.jpeg',
@@ -14,6 +13,7 @@
 		'/photos/heroSectionPhotos/fleurs_place_carnot.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling2.jpeg',
+		'/photos/heroSectionPhotos/action_ain_thrid.jpg',
 		'/photos/heroSectionPhotos/lac_sidi_mohamed_benali.jpeg',
 		'/photos/heroSectionPhotos/trash.jpeg'
 	];
@@ -68,14 +68,14 @@
 	</div>
 
 	<!-- Text overlay -->
-	<!-- <div
-		class="absolute inset-0 flex items-center justify-center z-20 bg-black bg-opacity-40 text-white text-center px-4"
+	<div
+		class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-950 to-transparent pb-4 pt-56 flex items-center justify-center z-20 text-white text-center rounded-b-xl"
 	>
 		<div class="max-w-3xl">
-			<h1 class="text-4xl md:text-5xl font-bold mb-4">Association Jeunesse Volontaire</h1>
+			<h1 class="text-3xl md:text-5xl font-bold mb-3">Association Jeunesse&nbsp;Volontaire</h1>
 			<p class="text-xl md:text-2xl">
 				Ensemble, agissons pour un avenir durable et une société solidaire.
 			</p>
 		</div>
-	</div> -->
+	</div>
 </div>
