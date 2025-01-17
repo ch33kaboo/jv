@@ -44,7 +44,7 @@
 	});
 </script>
 
-<div class="relative w-full h-[450px] overflow-hidden rounded-xl sm:rounded-none">
+<div class="relative w-full h-[490px] overflow-hidden rounded-xl sm:rounded-none -mt-5 md:-mt-8">
 	<!-- Gradient overlays for fade effect -->
 	<div
 		class="absolute inset-y-0 left-0 hidden sm:block w-40 bg-gradient-to-r from-[#F9FFFC] to-transparent z-10"
