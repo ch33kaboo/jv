@@ -44,38 +44,50 @@
 	});
 </script>
 
-<div class="relative w-full h-[490px] overflow-hidden rounded-xl sm:rounded-none -mt-5 md:-mt-8">
-	<!-- Gradient overlays for fade effect -->
-	<div
-		class="absolute inset-y-0 left-0 hidden sm:block w-40 bg-gradient-to-r from-[#F9FFFC] to-transparent z-10"
-	/>
-	<div
-		class="absolute inset-y-0 right-0 hidden sm:block w-40 bg-gradient-to-l from-[#F9FFFC] to-transparent z-10"
-	/>
+<div class="relative w-full h-full -mt-5 md:-mt-8">
+	<div class="relative w-full h-[490px] overflow-hidden rounded-xl sm:rounded-none inset-0">
+		<!-- Gradient overlays for fade effect -->
+		<div
+			class="absolute inset-y-0 left-0 hidden sm:block w-40 bg-gradient-to-r from-[#F9FFFC] to-transparent z-10"
+		/>
+		<div
+			class="absolute inset-y-0 right-0 hidden sm:block w-40 bg-gradient-to-l from-[#F9FFFC] to-transparent z-10"
+		/>
 
-	<!-- Image slider -->
-	<div class="flex h-full" bind:this={sliderContainer}>
-		{#each photos as photo}
-			<div class="flex-none h-full px-2">
-				<img
-					src={photo}
-					alt="Jeunesse Volontaire activities"
-					class="w-full h-full object-cover rounded-xl"
-					loading="lazy"
-				/>
+		<!-- Image slider -->
+		<div class="flex h-full" bind:this={sliderContainer}>
+			{#each photos as photo}
+				<div class="flex-none h-full px-2">
+					<img
+						src={photo}
+						alt="Jeunesse Volontaire activities"
+						class="w-full h-full object-cover rounded-xl"
+						loading="lazy"
+					/>
+				</div>
+			{/each}
+		</div>
+
+		<!-- Text overlay -->
+		<div
+			class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-950 to-transparent pb-4 pt-56 flex items-center justify-center z-20 text-white text-center rounded-b-xl"
+		>
+			<div class="max-w-3xl">
+				<h1 class="text-3xl md:text-5xl font-bold mb-3">Association Jeunesse&nbsp;Volontaire</h1>
+				<p class="text-xl md:text-2xl">
+					Ensemble, agissons pour un avenir durable et une société solidaire.
+				</p>
 			</div>
-		{/each}
-	</div>
-
-	<!-- Text overlay -->
-	<div
-		class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-950 to-transparent pb-4 pt-56 flex items-center justify-center z-20 text-white text-center rounded-b-xl"
-	>
-		<div class="max-w-3xl">
-			<h1 class="text-3xl md:text-5xl font-bold mb-3">Association Jeunesse&nbsp;Volontaire</h1>
-			<p class="text-xl md:text-2xl">
-				Ensemble, agissons pour un avenir durable et une société solidaire.
-			</p>
 		</div>
 	</div>
+	<h3
+		class="absolute -top-2 -left-3 px-8 z-20 text-white text-center text-3xl font-naturally -rotate-3"
+	>
+		JV - J’y vais, j’agis, je change
+	</h3>
+	<img
+		src="/assets/brush.svg"
+		alt="brush stroke"
+		class="absolute -top-5 -left-8 z-10 w-[450px] -rotate-3"
+	/>
 </div>
