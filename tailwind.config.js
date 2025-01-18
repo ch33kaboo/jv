@@ -15,6 +15,9 @@ export default {
 						opacity: 1
 					}
 				}
+			},
+			fontFamily: {
+				naturally: ['Naturaly']
 			}
 		}
 	},
