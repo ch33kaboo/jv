@@ -13,7 +13,7 @@
 		'/photos/heroSectionPhotos/fleurs_place_carnot.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling2.jpeg',
-		'/photos/heroSectionPhotos/action_ain_thrid.jpg',
+		'/photos/heroSectionPhotos/action_sidi_yacoub.jpg',
 		'/photos/heroSectionPhotos/lac_sidi_mohamed_benali.jpeg',
 		'/photos/heroSectionPhotos/trash.jpeg'
 	];
