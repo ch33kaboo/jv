@@ -44,7 +44,7 @@
 	});
 </script>
 
-<div class="relative w-full h-full -mt-5 md:-mt-8">
+<div class="relative w-full h-full -mt-5 md:-mt-7">
 	<div class="relative w-full h-[490px] overflow-hidden rounded-xl sm:rounded-none inset-0">
 		<!-- Gradient overlays for fade effect -->
 		<div
@@ -81,13 +81,17 @@
 		</div>
 	</div>
 	<h3
-		class="absolute -top-2 -left-3 px-8 z-20 text-white text-center text-3xl font-naturally -rotate-3"
+		class="absolute -top-2 -left-3 px-8 z-20 text-white text-center text-3xl font-naturally -rotate-[3.8deg] hidden sm:block"
 	>
 		JV - J’y vais, j’agis, je change
 	</h3>
 	<img
 		src="/assets/brush.svg"
 		alt="brush stroke"
-		class="absolute -top-5 -left-8 z-10 w-[450px] -rotate-3"
+		class="absolute -top-5 -left-8 z-10 w-[450px] -rotate-3 hidden sm:block"
 	/>
 </div>
+
+<h3 class="px-2 text-center text-3xl font-naturally block sm:hidden -mt-8">
+	JV - J’y vais, j’agis, je change
+</h3>
