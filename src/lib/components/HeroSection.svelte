@@ -18,16 +18,16 @@
 		'/photos/heroSectionPhotos/trash.jpeg'
 	];
 
-	// Initially limit displayed photos to the first 4
-	let displayedPhotos = photos.slice(0, 4);
+	// Initially limit displayed photos to the first 3
+	let displayedPhotos = photos.slice(0, 3);
 
 	let sliderContainer: HTMLDivElement;
 
 	onMount(() => {
-		// Wait for 10 seconds, then show all photos
+		// Wait for 6 seconds, then show all photos
 		setTimeout(() => {
 			displayedPhotos = photos;
-		}, 10000);
+		}, 6000);
 
 		const duration = 25000; // Duration for one complete cycle
 		const animate = () => {
