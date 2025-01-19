@@ -72,7 +72,12 @@
 					<div class="card bg-base-100 shadow-md border">
 						{#if action.photo}
 							<figure>
-								<img src={action.photo.url} alt={action.name} class="w-full h-48 object-cover" />
+								<img
+									src={action.photo.url}
+									alt={action.name}
+									class="w-full h-48 object-cover"
+									loading="lazy"
+								/>
 							</figure>
 						{/if}
 						<div class="card-body">

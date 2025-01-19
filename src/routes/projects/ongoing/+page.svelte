@@ -44,13 +44,18 @@
 	</p>
 
 	<div class="grid gap-6">
-		{#each data.projects as project}
+		{#each data.projects as project, index}
 			<div
 				class="card lg:card-side bg-base-100 shadow-xl animate-fade border border-neutral border-opacity-25"
 			>
 				{#if project.photo}
 					<figure class="lg:w-1/3">
-						<img src={project.photo.url} alt={project.name} class="h-full w-full object-cover" />
+						<img
+							src={project.photo.url}
+							alt={project.name}
+							class="h-full w-full object-cover"
+							loading={index == 0 ? 'eager' : 'lazy'}
+						/>
 					</figure>
 				{/if}
 				<div class="card-body w-full lg:max-w-none lg:w-2/3">
