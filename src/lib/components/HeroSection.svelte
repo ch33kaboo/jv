@@ -56,13 +56,13 @@
 
 		<!-- Image slider -->
 		<div class="flex h-full" bind:this={sliderContainer}>
-			{#each photos as photo}
+			{#each photos as photo, index}
 				<div class="flex-none h-full px-2">
 					<img
 						src={photo}
 						alt="Jeunesse Volontaire activities"
-						class="w-full h-full object-cover rounded-xl"
-						loading="lazy"
+						class="w-full h-full object-cover rounded-xl min-w-[392px]"
+						loading={index >= 3 ? 'lazy' : 'eager'}
 					/>
 				</div>
 			{/each}
