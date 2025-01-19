@@ -18,9 +18,17 @@
 		'/photos/heroSectionPhotos/trash.jpeg'
 	];
 
+	// Initially limit displayed photos to the first 4
+	let displayedPhotos = photos.slice(0, 4);
+
 	let sliderContainer: HTMLDivElement;
 
 	onMount(() => {
+		// Wait for 10 seconds, then show all photos
+		setTimeout(() => {
+			displayedPhotos = photos;
+		}, 10000);
+
 		const duration = 25000; // Duration for one complete cycle
 		const animate = () => {
 			if (!sliderContainer) return;
@@ -56,7 +64,7 @@
 
 		<!-- Image slider -->
 		<div class="flex h-full" bind:this={sliderContainer}>
-			{#each photos as photo, index}
+			{#each displayedPhotos as photo, index}
 				<div class="flex-none h-full px-2">
 					<img
 						src={photo}
