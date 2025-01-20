@@ -1,3 +1,7 @@
+<script lang="ts">
+	export let data;
+</script>
+
 <svelte:head>
 	<title>Nouveauté - Jeunesse Volontaire</title>
 	<meta
