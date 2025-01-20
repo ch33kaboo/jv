@@ -26,6 +26,13 @@ export default {
 			options: {
 				hotspot: true
 			}
+		},
+		{
+			name: 'publishedAt',
+			title: 'Published At',
+			type: 'datetime',
+			initialValue: () => new Date().toISOString(),
+			validation: (Rule) => Rule.required()
 		}
 	]
 };
