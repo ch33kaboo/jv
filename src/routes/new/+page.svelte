@@ -11,6 +11,21 @@
 		});
 	};
 
+	const alignArabicRight = () => {
+		const proseElements = document.querySelectorAll('.prose');
+		const arabicRegex = /^[\u0600-\u06FF]/; // Regex to detect Arabic characters at the start
+
+		proseElements.forEach((proseElement) => {
+			const allChildren = proseElement.querySelectorAll('*'); // Get all inner tags
+
+			allChildren.forEach((child) => {
+				if (child.textContent.trim() && arabicRegex.test(child.textContent.trim())) {
+					child.classList.add('text-right'); // Add the alignment class if Arabic is detected
+				}
+			});
+		});
+	};
+
 	const replaceSpecialChars = () => {
 		const proseElements = document.querySelectorAll('.prose');
 		proseElements.forEach((prose) => {
@@ -32,6 +47,7 @@
 	onMount(() => {
 		replaceSpecialChars();
 		modifyIframes();
+		alignArabicRight();
 	});
 </script>
 
