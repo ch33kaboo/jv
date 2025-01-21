@@ -59,14 +59,34 @@
 	/>
 </svelte:head>
 
-<div class="max-w-2xl mx-auto w-full flex flex-col gap-16">
+<div class="max-w-2xl mx-auto w-full flex flex-col gap-14">
+	<h1 class="capitalize text-4xl font-extrabold">Découvrez nos dernières actualités</h1>
 	{#each data.news as newsItem}
-		<article class="flex flex-col gap-6">
+		<hr />
+		<article class="flex flex-col gap-7">
 			<header>
 				<h1 class="text-3xl font-extrabold mb-2">{newsItem.title}</h1>
-				<time datetime={newsItem.publishedAt} class="text-sm text-gray-600">
-					Publié le {formatDate(newsItem.publishedAt)}
-				</time>
+				<div class="flex flex-row justify-start items-center">
+					<svg
+						class="w-5 h-5 mr-1 text-gray-600"
+						data-slot="icon"
+						fill="none"
+						stroke-width="1.5"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+						aria-hidden="true"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"
+						/>
+					</svg>
+					<time datetime={newsItem.publishedAt} class="text-sm text-gray-600">
+						Publié le {formatDate(newsItem.publishedAt)}
+					</time>
+				</div>
 			</header>
 
 			{#if newsItem.photo}
