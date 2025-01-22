@@ -61,8 +61,10 @@
 
 <div class="max-w-2xl mx-auto w-full flex flex-col gap-14">
 	<h1 class="capitalize text-4xl font-extrabold">Découvrez nos dernières actualités</h1>
-	{#each data.news as newsItem}
-		<hr />
+	{#each data.news as newsItem, index}
+		{#if index !== 0}
+			<hr />
+		{/if}
 		<article class="flex flex-col gap-7">
 			<header>
 				<h1 class="text-3xl font-extrabold mb-2">{newsItem.title}</h1>
