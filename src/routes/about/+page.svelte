@@ -6,8 +6,8 @@
 	/>
 </svelte:head>
 
-<div class="flex justify-center">
-	<div class="w-full prose lg:prose-xl">
+<div class="max-w-2xl mx-auto w-full">
+	<div class="text-neutral text-opacity-90 prose w-full max-w-none">
 		<header>
 			<h1 class="text-center">Association de wilaya Sidi Bel Abbès <br /> Jeunesse Volontaire</h1>
 		</header>
