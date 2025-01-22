@@ -16,7 +16,7 @@
 		const arabicRegex = /^[\u0600-\u06FF]/; // Regex to detect Arabic characters at the start
 
 		proseElements.forEach((proseElement) => {
-			const allChildren = proseElement.querySelectorAll('*'); // Get all inner tags
+			const allChildren = proseElement.querySelectorAll('*:not(div)'); // Get all inner tags except divs
 
 			allChildren.forEach((child) => {
 				if (child.textContent.trim() && arabicRegex.test(child.textContent.trim())) {
