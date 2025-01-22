@@ -85,13 +85,13 @@
 			</p>
 			<div class="not-prose flex flex-col gap-6">
 				{#each data.project.actions as action}
-					<div class="card bg-base-100 shadow-md border">
+					<div class="card bg-base-100 shadow-md border border-neutral border-opacity-25">
 						{#if action.photo}
 							<figure>
 								<img
 									src={action.photo.url}
 									alt={action.name}
-									class="w-full h-48 object-cover"
+									class="w-full max-h-96 object-cover"
 									loading="lazy"
 								/>
 							</figure>
