@@ -21,6 +21,13 @@
 					phoneNumber: '',
 					function: ''
 				});
+			} else if (result.status == 500) {
+				toast.error(
+					'Une erreur technique est survenue lors de la soumission du formulaire.\n\nVeuillez signaler le problème en envoyant un email à sayadoun@yahoo.fr',
+					{
+						duration: 15000
+					}
+				);
 			}
 		}
 	});
