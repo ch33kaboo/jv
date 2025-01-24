@@ -16,6 +16,7 @@
 		"@sveltejs/adapter-auto": "^2.0.0",
 		"@sveltejs/kit": "^1.20.4",
 		"@tailwindcss/typography": "^0.5.16",
+		"@types/nodemailer": "^6.4.17",
 		"@typescript-eslint/eslint-plugin": "^6.0.0",
 		"@typescript-eslint/parser": "^6.0.0",
 		"autoprefixer": "^10.4.16",
@@ -41,6 +42,7 @@
 		"@sanity/vision": "^3.23.4",
 		"@supabase/supabase-js": "^2.47.10",
 		"dotenv": "^16.4.7",
+		"nodemailer": "^6.10.0",
 		"sanity": "^3.23.4",
 		"sitemap": "^8.0.0",
 		"svelte-french-toast": "^1.2.0"

@@ -23,7 +23,7 @@
 				});
 			} else if (result.status == 500) {
 				toast.error(
-					'Une erreur technique est survenue lors de la soumission du formulaire.\n\nVeuillez signaler le problème en envoyant un email à sayadoun@yahoo.fr',
+					"Une erreur technique est survenue lors de la soumission du formulaire.\n\nUn email a été envoyé à l'administrateur pour résoudre ce problème. Veuillez réessayer ultérieurement.",
 					{
 						duration: 15000
 					}
