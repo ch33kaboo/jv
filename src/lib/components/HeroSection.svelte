@@ -9,6 +9,7 @@
 		'/photos/heroSectionPhotos/president_au_lac.jpeg',
 		'/photos/heroSectionPhotos/group_photo_litma.jpeg',
 		'/photos/heroSectionPhotos/jeune_fille_au_lac.jpeg',
+		'/photos/heroSectionPhotos/volunteers_talking.jpeg',
 		'/photos/heroSectionPhotos/plantant_une_arbre.jpeg',
 		'/photos/heroSectionPhotos/fleurs_place_carnot.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling.jpeg',
