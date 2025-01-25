@@ -1,11 +1,12 @@
 import nodemailer from 'nodemailer';
+import { env } from '$env/dynamic/private';
 
 // Configure the email transporter
 const transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: '',
-		pass: ''
+		user: env.SMTP_USER,
+		pass: env.SMTP_PASS
 	}
 });
 
@@ -19,8 +20,8 @@ export async function sendErrorEmail(error: any) {
 	const randomNumber = Math.floor(1000 + Math.random() * 9000);
 
 	const mailOptions = {
-		from: process.env.SMTP_USER,
-		to: '', // Replace with the recipient's email
+		from: env.SMTP_USER,
+		to: env.MAIL_DESTINATION, // recipient's email
 		subject: `Erreur de soumission de formulaire pour le site JV (${randomNumber})`, // randomNumber is used to avoid duplicate subjects
 		html: `
 			<p>Une erreur de soumission de formulaire s'est produite le <strong>${formattedDate}</strong> à <strong>${formattedTime}</strong>.</p>
