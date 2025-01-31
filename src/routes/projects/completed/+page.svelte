@@ -62,7 +62,7 @@
 	<div class="grid gap-6">
 		{#each data.projects as project, index}
 			<div
-				class="card lg:card-side bg-base-100 shadow-xl animate-fade border border-neutral border-opacity-25"
+				class="card lg:card-side bg-base-100 shadow-xl animate-fade border border-neutral border-opacity-25 lg:max-h-[420px]"
 			>
 				{#if project.photo}
 					<figure class="lg:w-1/3">
