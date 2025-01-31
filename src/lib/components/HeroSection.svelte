@@ -3,19 +3,19 @@
 
 	// Get all hero section photos
 	const photos = [
-		'/photos/heroSectionPhotos/femmes.jpeg',
+		'/photos/heroSectionPhotos/group_photo_smiling.jpeg',
 		'/photos/heroSectionPhotos/groupe_lac.jpeg',
+		'/photos/heroSectionPhotos/volunteers_talking.jpeg',
 		'/photos/heroSectionPhotos/children_smiling.jpeg',
 		'/photos/heroSectionPhotos/president_au_lac.jpeg',
 		'/photos/heroSectionPhotos/group_photo_litma.jpeg',
 		'/photos/heroSectionPhotos/jeune_fille_au_lac.jpeg',
-		'/photos/heroSectionPhotos/volunteers_talking.jpeg',
 		'/photos/heroSectionPhotos/plantant_une_arbre.jpeg',
 		'/photos/heroSectionPhotos/fleurs_place_carnot.jpeg',
-		'/photos/heroSectionPhotos/group_photo_smiling.jpeg',
 		'/photos/heroSectionPhotos/group_photo_smiling2.jpeg',
 		'/photos/heroSectionPhotos/action_sidi_yacoub.jpg',
 		'/photos/heroSectionPhotos/lac_sidi_mohamed_benali.jpeg',
+		'/photos/heroSectionPhotos/femmes.jpeg',
 		'/photos/heroSectionPhotos/trash.jpeg'
 	];
 
