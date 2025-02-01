@@ -53,7 +53,7 @@
 	});
 </script>
 
-<div class="relative w-full h-full -mt-5 md:-mt-7">
+<div class="relative w-full h-full">
 	<div class="relative w-full h-[490px] overflow-hidden rounded-xl sm:rounded-none inset-0">
 		<!-- Gradient overlays for fade effect -->
 		<div

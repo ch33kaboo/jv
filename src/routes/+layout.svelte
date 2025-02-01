@@ -21,7 +21,7 @@
 {#if !isStudio}
 	<Navbar />
 {/if}
-<div class="w-full h-full {!isStudio ? 'px-3 pt-14 pb-28 md:px-16 md:pt-[70px] md:pb-28' : ''}">
+<div class="w-full h-full {!isStudio ? 'px-3 pt-10 pb-28 md:px-16 md:pb-28' : ''}">
 	<slot />
 </div>
 {#if !isStudio}
