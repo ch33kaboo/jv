@@ -3,7 +3,7 @@ import { Readable } from 'stream';
 
 export async function GET() {
 	// Define your base URL
-	const baseUrl = 'https://jvdz.netlify.app';
+	const baseUrl = 'https://jeunessevolontairesba.dz';
 
 	// Define the routes for your website
 	const routes = [
