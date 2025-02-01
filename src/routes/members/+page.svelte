@@ -82,7 +82,7 @@
 </div>
 
 {#if showFilterModal}
-	<div class="fixed inset-0 bg-black bg-opacity-5 flex items-center justify-center">
+	<div class="fixed inset-0 bg-black bg-opacity-5 flex items-center justify-center z-10">
 		<div class="bg-white p-6 rounded-lg shadow-xl w-96">
 			<h3 class="text-lg font-semibold mb-4">Filtrer par statut</h3>
 			<select class="select select-bordered w-full mb-4" bind:value={tempSelectedStatus}>
@@ -96,8 +96,9 @@
 				<button
 					class="btn btn-primary"
 					on:click={() => {
-						selectedStatus = tempSelectedStatus; // Apply the temporary status
+						selectedStatus = tempSelectedStatus;
 						showFilterModal = false;
+						window.scrollTo({ top: 0, behavior: 'smooth' });
 					}}
 				>
 					Appliquer
