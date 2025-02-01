@@ -47,7 +47,8 @@
 					<td>{member.firstName}</td>
 					<td>{member.email}</td>
 					<td>{member.age}</td>
-					<td>{member.phoneNumber}</td>
+					<td>{member.phoneNumber.replace(/ /g, '\u00A0')}</td> // regex to avoid breaking the
+					number (non-breaking space)
 					<td class={member.function ? '' : 'opacity-60'}>{member.function || 'Non renseigné'}</td>
 					<td>{new Date(member.created_at).toLocaleDateString('fr-FR')}</td>
 					<td
@@ -57,7 +58,7 @@
 							? 'text-green-800'
 							: 'text-red-800'}
 						>{member.applicationStatus === 'pending'
-							? 'En attente'
+							? 'En attente'.replace(/ /g, '\u00A0') // to avoid breaking the text (non-breaking space)
 							: member.applicationStatus === 'accepted'
 							? 'Accepté'
 							: 'Rejeté'}</td
