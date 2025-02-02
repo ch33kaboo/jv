@@ -47,8 +47,7 @@
 					<td>{member.firstName}</td>
 					<td>{member.email}</td>
 					<td>{member.age}</td>
-					<td>{member.phoneNumber.replace(/ /g, '\u00A0')}</td> // regex to avoid breaking the
-					number (non-breaking space)
+					<td>{member.phoneNumber.replace(/ /g, '\u00A0')}</td>
 					<td class={member.function ? '' : 'opacity-60'}>{member.function || 'Non renseigné'}</td>
 					<td>{new Date(member.created_at).toLocaleDateString('fr-FR')}</td>
 					<td
