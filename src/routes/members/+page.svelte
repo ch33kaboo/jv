@@ -63,6 +63,21 @@
 							: 'Rejeté'}</td
 					>
 				</tr>
+			{:else}
+				<tr>
+					<td colspan="8" class="py-4"
+						><b>Aucun membre trouvé.</b> <br /> Si vous pensez qu'il s'agit d'une erreur, cette
+						erreur est probablement causé par l'arrêt de votre projet Supabase. Veuillez vérifier
+						votre projet Supabase via ce lien :
+						<a
+							class="link text-secondary"
+							href="https://supabase.com/dashboard/project/tdccvcaasjcopyhaeruy"
+							target="_blank">Supabase Dashboard</a
+						>
+						et le restaurer s'il est en pause. <br />Si vous avez besoin d'aide, veuillez contacter
+						le développeur pour une assistance supplémentaire.</td
+					>
+				</tr>
 			{/each}
 		</tbody>
 	</table>
