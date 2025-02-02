@@ -96,7 +96,7 @@
 					class="w-full rounded-lg border border-neutral border-opacity-55 shadow-lg shadow-gray-300 overflow-hidden"
 				>
 					<img
-						src={newsItem.photo.url}
+						src="{newsItem.photo.url}?q=20"
 						alt={newsItem.photo.alt || newsItem.title}
 						class="w-full h-full object-cover transform transition duration-300 hover:scale-105"
 					/>
