@@ -28,11 +28,13 @@
 				<li><a href="/" class="link-hover">Accueil</a></li>
 				<li>
 					<span><a href="/projects" class="link-hover">Projets</a></span>
-					<ul class="ml-5">
-						<li>
+					<ul class="ml-2">
+						<li class="flex items-center">
+							<span class="mr-2">•</span>
 							<a href="/projects/completed" class="link-hover">Projets Réalisés</a>
 						</li>
-						<li>
+						<li class="flex items-center">
+							<span class="mr-2">•</span>
 							<a href="/projects/ongoing" class="link-hover">Projets en Cours de Réalisation</a>
 						</li>
 					</ul>
