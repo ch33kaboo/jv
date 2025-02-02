@@ -3,7 +3,7 @@
 </script>
 
 <footer
-	class="flex flex-col items-center justify-center bg-gray-50 bg-opacity-90 backdrop-blur-sm shadow-sm text-primary-content p-10 gap-14 border-t"
+	class="flex flex-col items-center justify-center bg-gray-50 bg-opacity-90 backdrop-blur-sm shadow-sm text-primary-content py-10 px-5 sm:px-10 gap-14 border-t"
 	style="box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.05);"
 >
 	<div
@@ -22,7 +22,7 @@
 				bénévoles, engagé dans l'action sociale et la protection de l’environnement.
 			</p>
 		</div>
-		<div class="w-full sm:w-1/2">
+		<div class="hidden sm:block w-full sm:w-1/2">
 			<header class="text-primary-content opacity-100 mb-2 font-bold uppercase">Navigation</header>
 			<ul class="select-none">
 				<li><a href="/" class="link-hover">Accueil</a></li>
@@ -115,7 +115,8 @@
 		</div>
 		<div class="w-full sm:w-1/2 md:pl-4">
 			<p>
-				&copy; {currentYear ? currentYear : 2025} Jeunesse Volontaire (jv). Tous droits réservés.
+				&copy; <span class="hidden sm:inline">{currentYear ? currentYear : 2025}</span> Jeunesse Volontaire
+				(jv). Tous droits réservés.
 			</p>
 			<p>
 				Développé par <a
