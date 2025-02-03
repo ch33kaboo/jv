@@ -7,13 +7,35 @@
 </svelte:head>
 
 <div class="max-w-2xl mx-auto w-full">
+	<div class="relative w-full rounded-xl inset-0">
+		<img
+			src="/photos/heroSectionPhotos/group_photo_litma.jpeg"
+			alt="group of volunteers smiling"
+			class="w-full sm:h-[490px] object-cover rounded-xl"
+		/>
+		<div
+			class="absolute hidden sm:block bottom-0 left-0 right-0 bg-gradient-to-t from-green-950 to-transparent pb-4 pt-40 items-center justify-center z-20 text-white text-center rounded-b-xl"
+		>
+			<h1 class="text-4xl font-bold">Association Jeunesse&nbsp;Volontaire</h1>
+		</div>
+
+		<h3
+			class="absolute -top-2 -left-3 px-8 z-20 text-white text-center text-3xl font-naturally -rotate-[3.8deg] hidden sm:block"
+		>
+			JV - J’y vais, j’agis, je change
+		</h3>
+		<img
+			src="/assets/brush.svg"
+			alt="brush stroke"
+			class="absolute -top-5 -left-8 z-10 w-[450px] -rotate-3 hidden sm:block"
+		/>
+	</div>
+
+	<header class="block sm:hidden my-10">
+		<h1 class="text-center text-2xl font-bold">Association Jeunesse&nbsp;Volontaire</h1>
+	</header>
+
 	<div class="text-neutral text-opacity-90 prose w-full max-w-none">
-		<header>
-			<h1 class="text-center">Association de wilaya Sidi Bel Abbès <br /> Jeunesse Volontaire</h1>
-		</header>
-
-		<hr />
-
 		<main>
 			<section id="about">
 				<h2>À propos</h2>
