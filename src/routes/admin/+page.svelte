@@ -35,3 +35,25 @@
 	</li>
 	<li><a href="/members" class="link-hover">Page des membres</a></li>
 </ul>
+
+<a
+	class="flex w-fit gap-2 items-center btn btn-primary mt-5"
+	target="_blank"
+	rel="noopener noreferrer"
+	href="/Manuel%20Utilisation.pdf"
+	>Manuel d'utilisation
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		class="icon icon-tabler icon-tabler-download"
+		width="24"
+		height="24"
+		stroke-width="1.5"
+		stroke="currentColor"
+		fill="none"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		><path d="M0 0h24v24H0z" stroke="none" /><path
+			d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5 5-5M12 4v12"
+		/></svg
+	></a
+>
