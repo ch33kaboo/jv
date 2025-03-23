@@ -9,7 +9,7 @@
 <div class="max-w-2xl mx-auto w-full">
 	<div class="relative w-full rounded-xl inset-0">
 		<img
-			src="/photos/heroSectionPhotos/group_photo_litma.jpeg"
+			src="/photos/heroSectionPhotos/group_photo_litma.webp"
 			alt="group of volunteers smiling"
 			class="w-full sm:h-[490px] object-cover rounded-xl"
 		/>
