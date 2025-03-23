@@ -25,7 +25,14 @@ export default {
 			type: 'image',
 			options: {
 				hotspot: true // Enables UI for selecting what areas of an image should be cropped
-			}
+			},
+			validation: (Rule) =>
+				Rule.custom((image) => {
+					if (!image || !image.asset) return true; // Allow empty value if not required
+
+					const isJPG = image.asset._ref.endsWith('.jpg') || image.asset._ref.endsWith('.jpeg');
+					return isJPG ? true : 'Only JPG images are allowed';
+				})
 		}
 	]
 };

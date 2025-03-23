@@ -26,7 +26,13 @@ export default {
 			options: {
 				hotspot: true
 			},
-			validation: (Rule) => Rule.required()
+			validation: (Rule) =>
+				Rule.custom((image) => {
+					if (!image || !image.asset) return 'Photo is required'; // Ensure it's required
+
+					const isJPG = image.asset._ref.endsWith('.jpg') || image.asset._ref.endsWith('.jpeg');
+					return isJPG ? true : 'Only JPG images are allowed';
+				})
 		},
 		{
 			name: 'status',
