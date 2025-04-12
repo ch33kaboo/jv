@@ -5,7 +5,7 @@
 
 	const alignArabicRight = () => {
 		const proseElements = document.querySelectorAll('.prose');
-		const arabicRegex = /^[\u0600-\u06FF]/; // Regex to detect Arabic characters at the start
+		const arabicRegex = /^[\u0600-\u06FF]|^[^\u0600-\u06FF]{1}[\u0600-\u06FF]/; // Regex to detect Arabic characters at the first or second position
 
 		proseElements.forEach((proseElement) => {
 			const allChildren = proseElement.querySelectorAll('*:not(div)'); // Get all inner tags except divs
