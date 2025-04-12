@@ -67,7 +67,7 @@
 				{#if project.photo}
 					<figure class="lg:w-1/3">
 						<img
-							src={project.photo.url}
+							src="{project.photo.url}?q=20"
 							alt={project.name}
 							class="h-full w-full object-cover"
 							loading={index == 0 ? 'eager' : 'lazy'}

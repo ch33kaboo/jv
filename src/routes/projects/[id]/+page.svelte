@@ -53,7 +53,7 @@
 	{#if data.project.photo}
 		<div class="not-prose w-full h-96 relative mb-8 rounded-lg overflow-hidden">
 			<img
-				src={data.project.photo.url}
+				src="{data.project.photo.url}?q=20"
 				alt={data.project.name}
 				class="w-full h-full object-cover"
 			/>
@@ -89,7 +89,7 @@
 						{#if action.photo}
 							<figure>
 								<img
-									src={action.photo.url}
+									src="{action.photo.url}?q=20"
 									alt={action.name}
 									class="w-full max-h-96 object-cover"
 									loading="lazy"
