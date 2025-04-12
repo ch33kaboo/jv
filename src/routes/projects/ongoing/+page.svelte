@@ -101,7 +101,9 @@
 							</div>
 						{/if}
 						<button
-							class="btn btn-primary self-end"
+							class="btn btn-primary {!(project.actions && project.actions.length > 0)
+								? 'ml-auto'
+								: 'mt-auto'}"
 							on:click={() => goto(`/projects/${project._id}`)}>voir les détails du projet</button
 						>
 					</div>
