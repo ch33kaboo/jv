@@ -30,7 +30,7 @@ export default {
 				Rule.custom((image) => {
 					if (!image || !image.asset) return true; // Allow empty value if not required
 
-					const isJPG = image.asset._ref.endsWith('.jpg') || image.asset._ref.endsWith('.jpeg');
+					const isJPG = image.asset._ref.endsWith('jpg') || image.asset._ref.endsWith('jpeg');
 					return isJPG ? true : 'Only JPG images are allowed';
 				})
 		}
